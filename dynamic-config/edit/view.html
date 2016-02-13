@@ -1,0 +1,44 @@
+<form name="form">
+    <div class="panel">
+        </br>
+        </br>
+        <div>
+            <div class="panel-heading" id="insurance">
+                <h2>Pais</h2>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="form-group col-md-3" show-errors>
+                        <div class="form-group">
+                            <label for="name" class="control-label">Nombre</label>
+                            <input type="text" class="form-control" id="name" name="name" ng-model="vm.country.name"/>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <div class="form-group">
+                            <label for="description" class="control-label">Descripcion</label>
+                            <input type="text" class="form-control" id="description" name="description" ng-model="vm.country.description" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+</br>
+</br>
+<footer class="text-center">
+    <div class="footer-below">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="col-md-2 col-md-offset-8">
+                        <button class="btn btn-primary" ng-click="vm.newCountry()" ng-hide="showMessage">Continuar</button>
+                    </div>
+                </div>
+            </div>
+            </br>
+        </div>
+    </div>
+</footer>

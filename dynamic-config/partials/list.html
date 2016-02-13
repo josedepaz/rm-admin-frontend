@@ -1,0 +1,37 @@
+Elementos: 
+<form class="form-horizontal form-group-lg" ng-controller="AdminListController as vm">
+    <div ng-if="subview">
+        <a href="javascript:void(0);" ng-click="vm.reloadView();">Atras</a>
+    </div>
+    <div>
+        <a href="#/config/{{vm.entity.id}}/new">Nuevo</a>
+    </div>
+    <table class="table table-stripped table-bordered">
+        <thead>
+            <tr>
+                <th ng-repeat="field in vm.entity.fields">
+                    {{field.displayName}}
+                </th>
+                <th>
+                    Acciones
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="element in vm.list">
+                <td ng-repeat="field in vm.entity.fields">
+                    <div ng-if="field.fieldType === 'INPUT'">
+                        {{element[field.fieldName]}}
+                    </div>
+                    <div ng-if="field.fieldType === 'OBJECT_ARRAY'">
+                        <a href="javascript:void(0);" ng-click="vm.viewElements(element[field.fieldName], field)">Ver elementos</a>
+                    </div>
+                </td>
+                <td>
+                    <a href="#/config/{{vm.entity.id}}/{{element.id}}">Editar</a>
+                    <a href="#/config/{{vm.entity.id}}/{{element.id}}">Eliminar</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</form>
