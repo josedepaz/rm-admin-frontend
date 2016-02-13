@@ -45,7 +45,7 @@
                                     {{element[field.fieldName][field.lookupName]}}
                                 </div>
                                 <div ng-if="field.fieldType === 'OBJECT_ARRAY'">
-                                    <a href="javascript:void(0);" ng-click="vm.viewElements(element[field.fieldName], field)">Ver elementos</a>
+                                    <a href="javascript:void(0);" ng-click="vm.viewElements(element[field.fieldName], field)">Ver {{field.displayName}}</a>
                                 </div>
                             </td>
                             <td>
