@@ -28,10 +28,11 @@
                 <li class="item" ng-repeat="answer in answersCtrl.answers">
                     <div class="product-info">
                         <span class="product-title">
-                          {{answer.group.user}}:
+                          {{answer.group.user}} - {{answer.group.user.country.name}}:
                         </span>
                         <span class="pull-right"><input type="text" class="form-control" placeholder="5"/><a href="" class="btn btn-default">Guardar Nota</a></span>
                         <span class="product-description"> {{answer.answer}}</span>
+                        <small>{{answer.creationDate | date: 'dd/MM/yyyy'}}</small>
                     </div>
                 </li>
                 <!-- /.item -->
