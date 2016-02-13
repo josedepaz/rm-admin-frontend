@@ -33,6 +33,11 @@
             })
             .when('/config/:configId/:elementId', {
                 templateUrl: 'config/edit.html'
+            })
+            .otherwise({
+                templateUrl: 'home/home.html',
+                controller: 'homeController',
+                controllerAs: 'homeCtrl'
             });
     }
 })();

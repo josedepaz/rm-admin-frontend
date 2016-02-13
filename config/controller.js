@@ -25,7 +25,7 @@
     AdminListController.$inject = ['AdminServices', '$routeParams', '$location'];
     function AdminListController(AdminServices, $routeParams, $location) {
     	var self = this;
-        var pageSize = 10;
+        var pageSize = 100;
         var position = 0;
         var configId = $routeParams.configId;
         

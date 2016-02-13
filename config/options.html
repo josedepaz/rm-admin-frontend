@@ -1,4 +1,4 @@
-<form class="form-horizontal form-group-lg">
+<form class="form-horizontal form-group-lg" ng-controller="MainAdminController as vm">
     <div ng-repeat="entity in vm.entities">
         <a href="#/config/{{entity.id}}">{{entity.entityName}}</a>
     </div>
