@@ -27,11 +27,11 @@
             <ul class="products-list product-list-in-box">
                 <li class="item" ng-repeat="answer in answersCtrl.answers">
                     <div class="product-info">
-                        <span class="product-description">{{answer.answer}}</a> 
-                        <span class="pull-right"><input type="text" class="form-control" placeholder="5"/><a href="" class="btn btn-default">Guardar Nota</a></span>
                         <span class="product-title">
-                          Eviado por: {{answer.group.user}}
+                          {{answer.group.user}}:
                         </span>
+                        <span class="product-description"> {{answer.answer}}</span> 
+                        <span class="pull-right"><input type="text" class="form-control" placeholder="5"/><a href="" class="btn btn-default">Guardar Nota</a></span>
                     </div>
                 </li>
                 <!-- /.item -->
