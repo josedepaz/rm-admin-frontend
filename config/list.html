@@ -1,0 +1,55 @@
+<div class="box" ng-controller="AdminListController as vm">
+    <div class="box-header with-border">
+        <h3 class="box-title">Elementos</h3>
+    </div>
+    <!-- /.box-header -->
+    <div class="box-body">
+        <div ng-if="subview">
+            <a href="javascript:void(0);" ng-click="vm.reloadView();">Atras</a>
+        </div>
+        <a class="btn btn-app" href="#/config/{{vm.entity.id}}/new">
+            <i class="fa fa-plus"></i> Nuevo
+        </a>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th ng-repeat="field in vm.entity.fields">
+                        {{field.displayName}}
+                    </th>
+                    <th>
+                        Acciones
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="element in vm.list">
+                    <td ng-repeat="field in vm.entity.fields">
+                        <div ng-if="field.fieldType === 'INPUT'">
+                            {{element[field.fieldName]}}
+                        </div>
+                        <div ng-if="field.fieldType === 'OBJECT'">
+                            {{element[field.fieldName][field.lookupName]}}
+                        </div>
+                        <div ng-if="field.fieldType === 'OBJECT_ARRAY'">
+                            <a href="javascript:void(0);" ng-click="vm.viewElements(element[field.fieldName], field)">Ver elementos</a>
+                        </div>
+                    </td>
+                    <td>
+                        <a href="#/config/{{vm.entity.id}}/{{element.id}}">Editar</a>
+                        <a href="#/config/{{vm.entity.id}}/{{element.id}}">Eliminar</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- /.box-body -->
+    <div class="box-footer clearfix">
+        <ul class="pagination pagination-sm no-margin pull-right">
+            <li><a href="#">«</a></li>
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">»</a></li>
+        </ul>
+    </div>
+</div>
