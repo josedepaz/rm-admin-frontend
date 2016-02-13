@@ -5,9 +5,9 @@
             <small>Respuestas</small>
           </h1>
     <ol class="breadcrumb">
-        <li><i class="fa fa-dashboard"></i> <a href="/#/scores/">Calificación</a></li>
-        <li> <a href="/#/scores/">Rallies</a></li>
-        <li> <a href="/#/scores/rally/{{rally.id}}">Preguntas</a></li>
+        <li><i class="fa fa-dashboard"></i> <a href="/rm-admin/#/scores/">Calificación</a></li>
+        <li> <a href="/rm-admin/#/scores/">Rallies</a></li>
+        <li> <a href="/rm-admin/#/scores/rally/{{rally.id}}">Preguntas</a></li>
         <li class="active"> Respuestas</li>
     </ol>
 </section>
@@ -27,7 +27,7 @@
             <ul class="products-list product-list-in-box">
                 <li class="item" ng-repeat="answer in answersCtrl.answers">
                     <div class="product-info">
-                        <a href="/#/scores/rally/{{rally.id}}/questions/" class="product-title">{{answer.answer}} <span class="label label-success pull-right">{{rally.status}}</span></a>
+                        <a href="/rm-admin/#/scores/rally/{{rally.id}}/questions/" class="product-title">{{answer.answer}} <span class="label label-success pull-right">{{rally.status}}</span></a>
                         <span class="product-description">
                           {{rally.description}}
                         </span>

@@ -40,7 +40,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <header class="main-header">
 
             <!-- Logo -->
-            <a href="/" class="logo">
+            <a href="/rm-admin/" class="logo">
                 <!-- mini logo for sidebar mini 50x50 pixels -->
                 <span class="logo-mini"><b>R</b>M</span>
                 <!-- logo for regular state and mobile devices -->
@@ -142,7 +142,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         <a href=""><i class="fa fa-th"></i> <span>Catálogos</span> <i class="fa fa-angle-left pull-right"></i></a>
                         <ul class="treeview-menu" ng-controller="MainAdminController as vm">
                             <li ng-repeat="entity in vm.entities">
-                                <a href="#/config/{{entity.id}}"> <i class="fa fa-circle-o"></i>{{entity.displayName}}</a>
+                                <a href="/rm-admin/#/config/{{entity.id}}"> <i class="fa fa-circle-o"></i>{{entity.displayName}}</a>
                             </li>
                         </ul>
                     </li>

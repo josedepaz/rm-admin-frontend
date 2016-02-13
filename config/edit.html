@@ -26,7 +26,7 @@
             <div ng-if="!vm.editView">
                 <div>
                     <a href="javascript:void(0);" ng-click="vm.back();">Atras</a>
-                    <a href="#/config/{{vm.detailEntity.id}}/new">Nuevo</a>
+                    <a href="/rm-admin/#/config/{{vm.detailEntity.id}}/new">Nuevo</a>
                 </div>
                 <table class="table table-stripped table-bordered">
                     <thead>
@@ -50,8 +50,8 @@
                                 </div>
                             </td>
                             <td>
-                                <a href="#/config/{{vm.detailEntity.id}}/{{element.id}}">Editar</a>
-                                <a href="#/config/{{vm.detailEntity.id}}/{{element.id}}">Eliminar</a>
+                                <a href="/rm-admin/#/config/{{vm.detailEntity.id}}/{{element.id}}">Editar</a>
+                                <a href="/rm-admin/#/config/{{vm.detailEntity.id}}/{{element.id}}">Eliminar</a>
                             </td>
                         </tr>
                     </tbody>
