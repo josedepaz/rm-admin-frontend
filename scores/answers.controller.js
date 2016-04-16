@@ -12,7 +12,23 @@
         self.questionInfo = {};
         self.answers = [];
         
+        self.savePoints = savePoints;
+        
         activate();
+        
+        function savePoints(answerId, answer){
+            $http.post('/rm-server-web/rs/rallies/questions/' + $routeParams.questionId + '/answers/' + answerId, answer)
+            .then(savePointsDone, savePointsFail);
+        }
+        
+        function savePointsDone(result){
+            console.log(result);
+            alert("Puntos guardados exitosamente");
+        }
+        
+        function savePointsFail(error){
+            console.error(error);
+        }
         
         function activate(){
             $http.get('/rm-server-web/rs/rallies/questions/' + $routeParams.questionId)
