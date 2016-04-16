@@ -30,13 +30,13 @@
                 <li class="item" ng-repeat="answer in answersCtrl.answers">
                     <div class="product-info">
                         <span class="product-title">
-                          {{answer.group.user}} - {{answer.group.user.country.name}}:
+                          {{answer.group.user}} - {{answer.group.country.name}}:
                         </span>
-                        <span class="pull-right"><input type="text" class="form-control" placeholder="5"/><a href="" class="btn btn-default">Guardar Nota</a></span>
+                        <span class="pull-right"><input type="number" class="form-control" placeholder="5"/><a href="" class="btn btn-default">Guardar Nota</a></span>
                         <span ng-show="answer.answer.indexOf('URL:') !== 0" class="product-description"> {{answer.answer}}</span>
                         <div ng-show="answer.answer.indexOf('URL:') === 0">
                             <a ng-repeat="resource in answer.resources" href="{{resource.downloadUrl}}">
-                                <span class="glyphicon glyphicon-download-alt"> Descargar</span>
+                                <span class="glyphicon glyphicon-download-alt"></span> Descargar
                             </a>
                         </div>
                         <small>{{answer.creationDate | date: 'dd/MM/yyyy'}}</small>
