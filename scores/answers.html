@@ -32,7 +32,7 @@
                         <span class="product-title">
                           {{answer.group.user}} - {{answer.group.country.name}}:
                         </span>
-                        <span class="pull-right"><input type="number" class="form-control" placeholder="5" ng-model="answer.points"/><a href="" class="btn btn-default" ng-click="answersCtrl.savePoints(answer)">Guardar Nota</a></span>
+                        <span class="pull-right"><input type="number" class="form-control" placeholder="5" ng-model="answer.points"/><a href="" class="btn btn-default" ng-click="answersCtrl.savePoints(answer.id, answer)">Guardar Nota</a></span>
                         <span ng-show="answer.answer.indexOf('URL:') !== 0" class="product-description"> {{answer.answer}}</span>
                         <div ng-show="answer.answer.indexOf('URL:') === 0">
                             <a ng-repeat="resource in answer.resources" href="{{resource.downloadUrl}}">
