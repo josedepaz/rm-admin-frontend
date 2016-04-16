@@ -34,6 +34,21 @@
             .when('/config/:configId/:elementId', {
                 templateUrl: 'config/edit.html'
             })
+            .when('/rankings/', {
+                templateUrl: 'rankings/rankings.html',
+                controller: 'rankingsController',
+                controllerAs: 'rankingsCtrl'
+            })
+            .when('/rankings/:rallyId', {
+                templateUrl: 'rankings/ranking.html',
+                controller: 'rankingController',
+                controllerAs: 'rankingCtrl'
+            })
+            .when('/new-question', {
+                templateUrl: 'config/questions.html',
+                controller: 'rankingController',
+                controllerAs: 'rankingCtrl'
+            })
             .otherwise({
                 templateUrl: 'home/home.html',
                 controller: 'homeController',
