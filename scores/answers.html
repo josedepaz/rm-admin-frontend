@@ -36,7 +36,7 @@
                         <span ng-show="answer.answer.indexOf('URL:') !== 0" class="product-description"> {{answer.answer}}</span>
                         <div ng-show="answer.answer.indexOf('URL:') === 0">
                             <a ng-repeat="resource in answer.resources" href="{{resource.downloadUrl}}">
-                                <span class="glyphicon glyphicon-download-alt"></span>
+                                <span class="glyphicon glyphicon-download-alt"> Descargar</span>
                             </a>
                         </div>
                         <small>{{answer.creationDate | date: 'dd/MM/yyyy'}}</small>
