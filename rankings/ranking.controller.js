@@ -4,25 +4,25 @@
     angular.module('app')
         .controller('rankingController', rankingController);
         
-    rankingController.$inject = ['$http'];
+    rankingController.$inject = ['$http', '$routeParams'];
         
-    function rankingController($http) {
+    function rankingController($http, $routeParams) {
         var self = this;
         
-        self.rallies = [];
+        self.ranking = [];
         
         activate();
         
         
         function activate(){
-            $http.get('/rm-server-web/rs/rallies').then(getRalliesDone, getRalliesFail);
+            $http.get('/rm-server-web/rs/rallies/' + $routeParams.rallyId + '/ranking').then(getRankingDone, getRankingFail);
         }
         
-        function getRalliesDone(result) {
-            self.rallies = result.data;
+        function getRankingDone(result) {
+            self.ranking = result.data;
         }
         
-        function getRalliesFail(error) {
+        function getRankingFail(error) {
             console.log(error);
         }
     }
