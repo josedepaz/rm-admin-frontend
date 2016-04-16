@@ -27,7 +27,7 @@
         <!-- /.box-header -->
         <div class="box-body">
             <ul class="products-list product-list-in-box">
-                <li class="item" ng-repeat="answer in answersCtrl.answers">
+                <li class="item" ng-repeat="answer in answersCtrl.answers" ng-if="answer.input_type">
                     <div class="product-info">
                         <span class="product-title">
                           {{answer.group.user}} - {{answer.group.country.name}}:
