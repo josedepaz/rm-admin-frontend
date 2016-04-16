@@ -26,7 +26,8 @@
             <ul class="products-list product-list-in-box">
                 <li class="item" ng-repeat="question in rallyCountry.questions" ng-if="question.type === 'question'">
                     <div class="product-info">
-                        <p ng-bind-html="question.plainText"><span class="label label-success pull-right"><a href="/rm-admin/#/scores/rally/{{questionsCtrl.rallyId}}/questions/{{question.id}}/answers" class="btn btn-success">Calificar</a></span></p> 
+                        <p ng-bind-html="question.plainText"><span class="label label-success pull-right"></span></p>
+                        <a href="/rm-admin/#/scores/rally/{{questionsCtrl.rallyId}}/questions/{{question.id}}/answers" class="btn btn-warning btn-lg">Calificar</a> 
                     </div>
                 </li>
                 <!-- /.item -->
