@@ -23,6 +23,7 @@
         }
         
         function getQuestionDone(result) {
+            console.log(result.data);
             self.questionInfo = result.data;
         }
         

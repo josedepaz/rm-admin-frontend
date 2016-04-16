@@ -1,7 +1,7 @@
 (function () {
     'use strict';
 
-    angular.module('app', ['ngRoute', 'ngResource'])
+    angular.module('app', ['ngRoute', 'ngResource', 'ngSanitize'])
         .config(configuration);
 
     configuration.$inject = ['$routeProvider'];
