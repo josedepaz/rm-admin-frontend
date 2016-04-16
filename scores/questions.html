@@ -27,7 +27,7 @@
                 <li class="item" ng-repeat="question in rallyCountry.questions" ng-if="question.type === 'question'">
                     <div class="product-info">
                         <p ng-bind-html="question.plainText"><span class="label label-success pull-right"></span></p>
-                        <a href="/rm-admin/#/scores/rally/{{questionsCtrl.rallyId}}/questions/{{question.id}}/answers" class="btn btn-warning btn-lg">Calificar</a> 
+                        <a href="/rm-admin/#/scores/rally/{{questionsCtrl.rallyId}}/questions/{{question.id}}/answers" class="btn btn-warning btn-lg">Ver Respuestas</a> 
                     </div>
                 </li>
                 <!-- /.item -->
